@@ -81,7 +81,7 @@ public class Account extends Customer{
 		System.out.println(a.debit(1000));
 		System.out.println(a.credit(1000));
 		System.out.println(a.debit(1000));
-		System.out.println("--------------------------------------------------------------------------");
+		System.out.println("------------------------------------------------------------------------");
 		a.statement();
 
 	}
