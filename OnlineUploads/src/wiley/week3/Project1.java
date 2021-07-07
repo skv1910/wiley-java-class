@@ -32,7 +32,13 @@ public class Project1 {
 		users.add(new Employee("Wil007", "emp5", addr.get(1), prl.get(0), 500000.0));
 
 		List<Employee> emp_list = User.getEmployee(users);
+		
+		List<Employee> emp = users.stream().filter( n-> n instanceof Employee).map(n -> (Employee) n).toList();		
 
+//		for(Employee e : emp) {
+//			System.out.println(e.getName());
+//		}
+		
 		validateProject(emp_list, prl.get(0));
 		validateProject(emp_list, prl.get(1));
 		System.out.println("---------------------------------------------------------------------------");
