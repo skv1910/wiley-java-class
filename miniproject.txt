@@ -1,0 +1,20 @@
+Class account:
+	
+attributes:
+	acc. no.
+	acc. type 	 --> constrain based on acc. type : minimum balance, transaction limit
+	balance
+	customer(obj) 	--> attributes	: name, phone, email, aadhar, pan
+			--> methods	: to change phone,email ;verify pan or aadhar
+
+	transaction 	-->(list)	// stores all transactions
+
+Methods:
+	debit		// to debit money from acc and adds to transactions
+	credit		// to debit money from acc and adds to transactions
+	statement	// to get statement
+
+
+
+
+		
