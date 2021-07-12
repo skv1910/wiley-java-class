@@ -387,13 +387,10 @@ class cmp {
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-class User1 {
+class User1  {
 	private int id;
 	private String name;
 
-	public User1(){
-
-	}
 
 	public User1(int id, String name) {
 		this.id = id;
@@ -415,14 +412,51 @@ class User1 {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	@Override
-	public String toString() {
-		return "--"+ id + " : " + name +"";
-	}
-
+	
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
+//	@Override
+//	public String toString() {
+//		return "--"+ id + " : " + name +"";
+//	}
+	@Override
+	public String toString() {
+		return "User1 [id=" + id + ", name=" + name + "]";
+	}
+}
+
+class Address1 implements Cloneable{
+	private int zipcode;
+	private String city;
+	
+	public Address1(int zipcode, String city) {
+		super();
+		this.zipcode = zipcode;
+		this.city = city;
+	}
+	protected int getZipcode() {
+		return zipcode;
+	}
+	protected String getCity() {
+		return city;
+	}
+	protected void setZipcode(int zipcode) {
+		this.zipcode = zipcode;
+	}
+	protected void setCity(String city) {
+		this.city = city;
+	}
+	@Override
+	public String toString() {
+		return "Address [zipcode=" + zipcode + ", city=" + city + "]";
+	}
+	@Override
+	public boolean equals(Object x) {
+		Address1 a = (Address1)x;
+		return this.getCity().equals((a.getCity())) && this.getZipcode() == a.getZipcode();
+
+	}
+
 }
